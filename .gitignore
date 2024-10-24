@@ -1,0 +1,22 @@
+# DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+
+# Flask instance files
+instance/
+*.log
+
+# Environment variables
+.env
+
+# System files
+.DS_Store
+*.swp
+
+# Editor directiories and files
+.vscode/
+
