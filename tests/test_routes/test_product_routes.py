@@ -32,6 +32,7 @@ class ProductRoutesTestCase(unittest.TestCase):
         response = self.client.get('/api/products/')
         self.assertEqual(response.status_code, 200)
         self.assertIn('prod-test', str(response.data))  
+
     def test_create_product(self):
         response = self.client.post('/api/products/', json={
             "name": "New Product",
@@ -43,6 +44,19 @@ class ProductRoutesTestCase(unittest.TestCase):
         })
         self.assertEqual(response.status_code, 201)  
         self.assertIn('New Product', str(response.data))  
+        print(self.app.url_map)
+    
+    def test_update_product(self):
+        response = self.client.put('/api/products/1', json={
+            "name": "Updated Product",
+            "sku": "test-01",
+            "quantity": 200,
+            "price": 15.0,
+            "category": "Beverages",
+            "reorder_point": 10
+        })
+        self.assertEqual(response.status_code, 200)  
+        self.assertIn('Updated Product', str(response.data))  
         print(self.app.url_map)
 
 if __name__ == '__main__':
