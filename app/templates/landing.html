@@ -1,0 +1,150 @@
+{% extends "layout.html" %}
+
+{% block title %}Welcome to shelfLife - Inventory Management System{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero bg-light py-5 text-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold">ShelfLife</h1>
+        <p class="lead mb-4">Smart Inventory Management for Modern Businesses</p>
+        <a href="{{ url_for('frontend.index') }}" class="btn btn-primary btn-lg">Start Managing Inventory</a>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Why Choose shelfLife</h2>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <h3 class="h5">Real-time Tracking</h3>
+                        <p class="card-text">Monitor your inventory levels in real-time. Never rrrun out of stock or overstock again.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <h3 class="h5">Sales Management</h3>
+                        <p class="card-text">Track sales, credits, and damaged goods with ease. Keep your records accurate and up-to-date.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <h3 class="h5">Smart Reports</h3>
+                        <p class="card-text">Generate detailed reports to analyze your business performance and make data-driven decisions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <h3 class="h5">User-Friendly</h3>
+                        <p class="card-text">Simple and intuitive interface designed for businesses of all sizes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How to Use Section -->
+<section id="how-to-use" class="how-to-use bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">How to Use shelfLife</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="h5 mb-3">1. Add Your Products</h3>
+                        <p>Start by adding your products to the inventory. Include details like name, SKU, quantity, and price.</p>
+                        <ul class="list-unstyled">
+                            <li>✓ Enter product details</li>
+                            <li>✓ Set initial stock levels</li>
+                            <li>✓ Define reorder points</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="h5 mb-3">2. Record Transactions</h3>
+                        <p>Log all your sales, returns, and inventory adjustments in real-time.</p>
+                        <ul class="list-unstyled">
+                            <li>✓ Record sales</li>
+                            <li>✓ Process returns</li>
+                            <li>✓ Track damaged goods</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="h5 mb-3">3. Monitor & Analyze</h3>
+                        <p>Use the dashboard and reports to track your business performance.</p>
+                        <ul class="list-unstyled">
+                            <li>✓ View daily sales</li>
+                            <li>✓ Check stock levels</li>
+                            <li>✓ Generate reports</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">About shelfLife</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <p class="lead">shelfLife is a comprehensive inventory management solution designed for small-scale manufacturers and retailers. Our mission is to simplify inventory tracking and empower businesses with the tools they need to succeed.</p>
+                <p>Built with modern technology and user experience in mind, FlowTrack helps you focus on growing your business while we handle the complexities of inventory management.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Contact Us</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="h4">Get in Touch</h3>
+                <p>Have questions? We're here to help!</p>
+                <ul class="list-unstyled">
+                    <li class="mb-2">📧 Email: support@flowtrack.com</li>
+                    <li class="mb-2">📱 Phone: (233) 54-463-5303</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <form class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Your Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
