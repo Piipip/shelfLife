@@ -111,4 +111,4 @@ This project is licensed under the [MIT License](LICENSE).
 ## Author
 
 Created by [Piipip](https://github.com/Piipip)  
-Follow me on Twitter: [@yourhandle](https://twitter.com/philipkorans)
+Follow me on Twitter: [@philipkorans](https://twitter.com/philipkorans)
