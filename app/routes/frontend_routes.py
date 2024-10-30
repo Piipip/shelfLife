@@ -60,6 +60,11 @@ def add_product():
 def delete_product(id):
     try:
         product = Product.query.get_or_404(id)
+        # Check if product has any sales records
+        if product.sales:
+            flash('Cannot delete this product because it has sales records. Deleting it would cause data inconsistency in your sales history.', 'error')
+            return redirect(url_for('frontend.products'))
+            
         db.session.delete(product)
         db.session.commit()
         flash('Product deleted successfully', 'success')
