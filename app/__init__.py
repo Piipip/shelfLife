@@ -30,10 +30,12 @@ def create_app(config_class=None):
     db.init_app(app)
     ma.init_app(app)
     
-    from app.routes import product_routes, sales_routes  
-    
+    from app.routes import product_routes, sales_routes, report_routes, frontend_routes
     app.register_blueprint(product_routes.bp)
     app.register_blueprint(sales_routes.bp)
+    app.register_blueprint(report_routes.bp)
+    app.register_blueprint(frontend_routes.bp) 
+    
     
     with app.app_context():
         db.create_all()
