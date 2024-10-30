@@ -1,0 +1,42 @@
+.content-wrapper {
+    padding-top: 56px; 
+}
+
+.hero {
+    padding: 100px 0;
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+}
+
+.features .card,
+.how-to-use .card {
+    transition: transform 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.features .card:hover,
+.how-to-use .card:hover {
+    transform: translateY(-5px);
+}
+
+.about {
+    background-color: white;
+}
+
+.contact form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
